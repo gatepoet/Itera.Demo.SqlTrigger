@@ -5,35 +5,50 @@ namespace SqlTrigger.Data
 {
     public interface IFishRepository
     {
-        Fish GetFish(int id);
-        void AddFish(int id, int count);
+        int GetFishCount(int typeId);
+        void AddFish(int typeId, int amount);
+        void FishSold(int typeId, int amount);
         FishType[] GetFishTypes();
     }
 
     public class FishRepository : IFishRepository
     {
-        private FishyDb _context;
+        private readonly FishyEntities _context;
 
         public FishRepository()
         {
-            _context = new FishyDb();
+            _context = new FishyEntities();
         }
 
-        public Fish GetFish(int id)
+        public int GetFishCount(int typeId)
         {
-            return _context.Set<Fish>().Single(f => f.Id == id);
+            return _context.Fish
+                .Where(f => f.TypeId == typeId)
+                .Aggregate(0, (c,f)=> f.Count);
         }
 
-        public void AddFish(int id, int count)
+        public void AddFish(int typeId, int count)
         {
-            var fish = GetFish(id);
-            fish.Count += count;
+            _context.Fish.Add(new Fish {Count = count, TypeId = typeId});
+            _context.SaveChanges();
+        }
+
+        public void AddFishType(string name)
+        {
+            _context.FishType.Add(new FishType {Name = name});
+            _context.SaveChanges();
+        }
+
+
+        public void FishSold(int typeId, int amount)
+        {
+            _context.Fish.Add(new Fish { Count = -amount, TypeId = typeId });
             _context.SaveChanges();
         }
 
         public FishType[] GetFishTypes()
         {
-            return _context.Set<FishType>().ToArray();
+            return _context.FishType.ToArray();
         }
     }
 }

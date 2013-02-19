@@ -4,10 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d7f3861e25354aae9f7b1a43eb68efd2" Name="Diagram1">
+      <Diagram DiagramId="fc5810902d2f491bad7851915c22f434" Name="Diagram1">
         <EntityTypeShape EntityType="FishyModel.Fish" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="FishyModel.FishType" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="FishyModel.FishKey" ManuallyRouted="false" />
+        <AssociationConnector Association="FishyModel.FK_Fish_ToTable" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

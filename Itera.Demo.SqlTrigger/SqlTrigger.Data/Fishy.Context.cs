@@ -13,10 +13,10 @@ namespace SqlTrigger.Data
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class FishyDb : DbContext
+    public partial class FishyEntities : DbContext
     {
-        public FishyDb()
-            : base("name=FishyDb")
+        public FishyEntities()
+            : base("name=FishyEntities")
         {
         }
     
@@ -26,6 +26,6 @@ namespace SqlTrigger.Data
         }
     
         public DbSet<Fish> Fish { get; set; }
-        public DbSet<FishType> FishTypes { get; set; }
+        public DbSet<FishType> FishType { get; set; }
     }
 }

@@ -86,20 +86,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Fishy.sdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
-    <None Include="Fishy.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Fishy.Context.cs</LastGenOutput>
-    </None>
     <EntityDeploy Include="Fishy.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Fishy.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="Fishy.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Fishy.edmx</DependentUpon>
+      <LastGenOutput>Fishy.Context.cs</LastGenOutput>
+    </None>
     <None Include="Fishy.edmx.diagram">
       <DependentUpon>Fishy.edmx</DependentUpon>
     </None>
