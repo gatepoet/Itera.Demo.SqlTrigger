@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlTrigger.Data", "SqlTrigg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlTrigger.Data.Tests", "SqlTrigger.Data.Tests\SqlTrigger.Data.Tests.csproj", "{B914F4DA-7DD8-46D6-A8AD-D1AECD80CC71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlTrigger.Web", "SqlTrigger.Web\SqlTrigger.Web.csproj", "{A0E1840B-FBD9-44AD-A7C6-1BC23A192E37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{B914F4DA-7DD8-46D6-A8AD-D1AECD80CC71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B914F4DA-7DD8-46D6-A8AD-D1AECD80CC71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B914F4DA-7DD8-46D6-A8AD-D1AECD80CC71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0E1840B-FBD9-44AD-A7C6-1BC23A192E37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0E1840B-FBD9-44AD-A7C6-1BC23A192E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0E1840B-FBD9-44AD-A7C6-1BC23A192E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0E1840B-FBD9-44AD-A7C6-1BC23A192E37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

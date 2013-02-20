@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Broker.cs" />
     <Compile Include="Fish.cs">
       <DependentUpon>Fishy.tt</DependentUpon>
     </Compile>

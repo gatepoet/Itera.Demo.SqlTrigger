@@ -67,7 +67,6 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Fish" Relationship="FishyModel.FK_Fish_ToTable" FromRole="FishType" ToRole="Fish" />
         </EntityType>
         <Association Name="FK_Fish_ToTable">
           <End Role="FishType" Type="FishyModel.FishType" Multiplicity="1" />
